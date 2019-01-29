@@ -1,0 +1,14 @@
+<!--  laser scanner launch file -->
+<launch>
+    <node pkg="urg_node" type="urg_node" name="urg_node">
+        <param name="serial_port" value="/dev/ttyACM0" />
+        <param name="frame_id" value="laser_link" />
+        <param name="calibrate_time" value="true"/>
+        <param name="publish_intensity" value="true"/>
+        <param name="angle_min" value="-1.047"/>
+        <param name="angle_max" value="1.047"/>
+    </node>
+
+<node pkg="tf" type="static_transform_publisher" name="robot_to_kinect" args="0.45 0 .15 0 0 3.14 /base_link /laser_link 20" />
+
+</launch>
