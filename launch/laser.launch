@@ -9,6 +9,6 @@
         <param name="angle_max" value="1.047"/>
     </node>
 
-<node pkg="tf" type="static_transform_publisher" name="robot_to_kinect" args="0.45 0 .15 0 0 3.14 /base_link /laser_link 20" />
+<node pkg="tf" type="static_transform_publisher" name="robot_to_kinect" args="0.393 0 .155 0 0 3.14159 /base_link /laser_link 20" />
 
 </launch>
